@@ -7,38 +7,11 @@
 
 html,
 body {
-
-    height: 100%;
-    width: 100%;
-
-}
-
-/* Add more styles as needed */
-#page1 {
-    height: 100%;
-    width: 100%;
     background-color: black;
-    color: white;
 }
 
-#page2 {
-    height: 100%;
+#string {
+    height: 200px;
     width: 100%;
-    background-color: rgb(196, 58, 58);
-    color: white;
-    display: flex;
-    align-items: center;
-}
 
-#page2 h1 {
-    font-size: 30vw;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-#page3 {
-    height: 100%;
-    width: 100%;
-    background-color: rgb(64, 199, 82);
-    color: white;
 }
