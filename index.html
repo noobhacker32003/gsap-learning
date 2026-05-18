@@ -4,27 +4,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stellar Agency | GSAP Animation Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="string">
-        <svg width="1000" height="400">
-            <path id="path" d="M 10 100 Q 450 100 990 100" stroke="white" fill="transparent" />
-        </svg>
-    </div>
+    <div class="cursor"></div>
+    <nav>
+        <div class="logo">STELLAR.</div>
+        <div class="links">
+            <a href="#">Work</a>
+            <a href="#">Studio</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
 
+    <main>
+        <!-- 1. HERO — Staggered text reveal -->
+        <section class="hero">
+            <h1 class="hero-title">
+                <div class="line"><span class="char">C</span><span class="char">R</span><span class="char">E</span><span
+                        class="char">A</span><span class="char">T</span><span class="char">I</span><span
+                        class="char">N</span><span class="char">G</span></div>
+                <div class="line">DIGITAL</div>
+                <div class="line">MAGIC</div>
+            </h1>
+            <p class="hero-sub">We build immersive web experiences using GSAP.</p>
+        </section>
 
+        <!-- 2. INTERACTIVE STRING — SVG attr tween + elastic ease -->
+        <div id="string-container">
+            <svg width="1000" height="200" id="string-svg">
+                <path id="path" d="M 10 100 Q 500 100 990 100" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2"
+                    fill="transparent" />
+            </svg>
+        </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
-        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
-        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- 3. SERVICES — Staggered fade/slide cards -->
+        <section class="services">
+            <h2 class="section-title">Our Expertise</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Animation</h3>
+                    <p>Fluid, performant web animations that captivate users.</p>
+                </div>
+                <div class="card">
+                    <h3>Design</h3>
+                    <p>Award-winning interfaces that push the boundaries of the web.</p>
+                </div>
+                <div class="card">
+                    <h3>Development</h3>
+                    <p>Robust, scalable engineering with cutting-edge tech.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TEXT REVEAL — Scroll-scrubbed clip-path wipe -->
+        <section class="text-reveal">
+            <div class="reveal-container">
+                <p class="reveal-line">We don't just build websites.</p>
+                <p class="reveal-line">We craft <span class="highlight">experiences</span></p>
+                <p class="reveal-line">that leave a lasting impression.</p>
+            </div>
+        </section>
+
+        <!-- 5. STATS — Animated counting numbers -->
+        <section class="stats">
+            <div class="stat">
+                <span class="stat-number" data-target="150">0</span>
+                <span class="stat-suffix">+</span>
+                <p class="stat-label">Projects Delivered</p>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="98">0</span>
+                <span class="stat-suffix">%</span>
+                <p class="stat-label">Client Satisfaction</p>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="12">0</span>
+                <span class="stat-suffix"></span>
+                <p class="stat-label">Awards Won</p>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="5">0</span>
+                <span class="stat-suffix">M+</span>
+                <p class="stat-label">Users Reached</p>
+            </div>
+        </section>
+
+        <!-- 6. PARALLAX — Multi-speed depth layers -->
+        <section class="parallax-section">
+            <div class="parallax-layer layer-back">
+                <div class="parallax-shape shape-circle"></div>
+                <div class="parallax-shape shape-ring"></div>
+            </div>
+            <div class="parallax-layer layer-mid">
+                <h2 class="parallax-text">DEPTH</h2>
+            </div>
+            <div class="parallax-layer layer-front">
+                <div class="parallax-shape shape-dot dot-1"></div>
+                <div class="parallax-shape shape-dot dot-2"></div>
+                <div class="parallax-shape shape-dot dot-3"></div>
+                <div class="parallax-shape shape-line line-1"></div>
+                <div class="parallax-shape shape-line line-2"></div>
+            </div>
+        </section>
+
+        <!-- 7. HORIZONTAL SCROLL — Pinned scrub -->
+        <section class="horizontal-scroll">
+            <div class="horizontal-container">
+                <div class="panel panel-1">
+                    <h1>INNOVATIVE</h1>
+                </div>
+                <div class="panel panel-2">
+                    <h1>CREATIVE</h1>
+                </div>
+                <div class="panel panel-3">
+                    <h1>BOLD</h1>
+                </div>
+                <div class="panel panel-4">
+                    <h1>FUTURE</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. ORBIT — Rotating orbital ring -->
+        <section class="orbit-section">
+            <h2 class="orbit-title">Our Process</h2>
+            <div class="orbit-ring">
+                <div class="orbit-center">
+                    <span>GSAP</span>
+                </div>
+                <div class="orbit-item" data-angle="0"><span>Ideate</span></div>
+                <div class="orbit-item" data-angle="60"><span>Design</span></div>
+                <div class="orbit-item" data-angle="120"><span>Develop</span></div>
+                <div class="orbit-item" data-angle="180"><span>Test</span></div>
+                <div class="orbit-item" data-angle="240"><span>Deploy</span></div>
+                <div class="orbit-item" data-angle="300"><span>Iterate</span></div>
+            </div>
+        </section>
+
+        <!-- 9. MARQUEE — Scroll-velocity reactive -->
+        <section class="marquee">
+            <div class="marquee-inner">
+                <div class="marquee-part">
+                    INNOVATE &bull; CREATE &bull; ELEVATE &bull;
+                </div>
+                <div class="marquee-part">
+                    INNOVATE &bull; CREATE &bull; ELEVATE &bull;
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. MAGNETIC CARDS — 3D tilt + magnetic follow -->
+        <section class="magnetic-section">
+            <h2 class="magnetic-title">Featured Work</h2>
+            <p class="magnetic-subtitle">Hover to experience magnetic interaction</p>
+            <div class="magnetic-grid">
+                <div class="magnetic-card" id="mag-card-1">
+                    <div class="magnetic-card-inner">
+                        <div class="magnetic-card-glow"></div>
+                        <span class="magnetic-card-number">01</span>
+                        <h3 class="magnetic-card-heading">Kinetic<br>Typography</h3>
+                        <p class="magnetic-card-desc">Dynamic text animations that bring stories to life through motion.
+                        </p>
+                        <div class="magnetic-card-tag">Motion</div>
+                    </div>
+                </div>
+                <div class="magnetic-card" id="mag-card-2">
+                    <div class="magnetic-card-inner">
+                        <div class="magnetic-card-glow"></div>
+                        <span class="magnetic-card-number">02</span>
+                        <h3 class="magnetic-card-heading">Scroll<br>Narratives</h3>
+                        <p class="magnetic-card-desc">Scroll-driven experiences that unfold content in cinematic
+                            sequences.</p>
+                        <div class="magnetic-card-tag">Scroll</div>
+                    </div>
+                </div>
+                <div class="magnetic-card" id="mag-card-3">
+                    <div class="magnetic-card-inner">
+                        <div class="magnetic-card-glow"></div>
+                        <span class="magnetic-card-number">03</span>
+                        <h3 class="magnetic-card-heading">Micro<br>Interactions</h3>
+                        <p class="magnetic-card-desc">Subtle UI feedback that makes interfaces feel alive and
+                            responsive.</p>
+                        <div class="magnetic-card-tag">UI/UX</div>
+                    </div>
+                </div>
+                <div class="magnetic-card" id="mag-card-4">
+                    <div class="magnetic-card-inner">
+                        <div class="magnetic-card-glow"></div>
+                        <span class="magnetic-card-number">04</span>
+                        <h3 class="magnetic-card-heading">Particle<br>Systems</h3>
+                        <p class="magnetic-card-desc">Generative particle effects that create mesmerizing visual
+                            landscapes.</p>
+                        <div class="magnetic-card-tag">Creative</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. GLITCH TEXT SCRAMBLE — Hover scramble + scroll reveal -->
+        <section class="scramble-section">
+            <p class="scramble-label">// interact with the words below</p>
+            <div class="scramble-words">
+                <div class="scramble-word" data-text="VELOCITY">VELOCITY</div>
+                <div class="scramble-word" data-text="PRECISION">PRECISION</div>
+                <div class="scramble-word" data-text="FLUIDITY">FLUIDITY</div>
+                <div class="scramble-word" data-text="IMPACT">IMPACT</div>
+            </div>
+            <div class="scramble-bar">
+                <div class="scramble-bar-fill"></div>
+            </div>
+        </section>
+
+        <!-- 12. FOOTER — Elastic scale reveal -->
+        <section class="footer">
+            <h2 class="footer-title">Let's Talk.</h2>
+            <p>hello@stellar.agency</p>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>
